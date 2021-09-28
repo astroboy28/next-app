@@ -27,6 +27,13 @@ nav a {
 nav .logo {
   margin-right: auto;
 }
+.notFound {
+  text-align: center;
+}
+.notFound a {
+  color: #4979ff;
+  text-decoration: underline;
+}
 footer {
   display: block;
   text-align: center;
