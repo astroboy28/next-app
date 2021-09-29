@@ -1,4 +1,5 @@
 import styles from '../../styles/myStyles.module.css'
+import Link from 'next/link';
 
 export const getStaticProps = async () => {
 
@@ -15,11 +16,11 @@ const FetchData = ({fetchUsers}) => {
         <div className={styles.container}>
             <h1>Fetching Data</h1>
             {fetchUsers.map(userWatever => (
-                <div key={ userWatever.id }> 
+                <Link href={'/pages/' + userWatever.id } key={ userWatever.id }> 
                     <a className={styles.single}>
                         <h3>{ userWatever.name }</h3>
                     </a>
-                </div>
+                </Link>
             ))}
         </div>
      );
