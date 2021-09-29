@@ -1,10 +1,12 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
     return ( 
         <nav>
             <div className="logo">
-                <h1>Del List</h1>
+               {/* <img src="/vercel.svg" />  This is 1 way of using image directly without import Image in next/image */} 
+               <Image src="/vercel.svg" width={128} height={77}/> {/* attributes must be declared or it will throw an error. This method makes the image automatically responsive. */}
             </div> 
             <Link href="/"><a>Home</a></Link>
             <Link href="/about"><a>About</a></Link>
